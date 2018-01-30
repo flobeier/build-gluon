@@ -13,7 +13,7 @@ Next steps for a successful build:
 * `cd` to `/gluon` and run a `git pull` (not strictly necessary if you just built the docker image since the build process cloned the most recent version, however, I'd recommend making it a habit)
 * check out the branch/tag you want to build, e. g. `git checkout v2017.1.x`
 * run `make update GLUON_RELEASE=<your release name>`, e. g. `make update GLUON_RELEASE=2017.1.x`
-* start building with `make GLUON_TARGET=<your target> GLUON_RELEASE=<your release name>`. I'd recommend adding `-j`, followed by the number of threads your CPU has, in order to make use of multithreading and speed up the build process. An example build command could be `make -j4 GLUON_RELEASE=ar71xx-tiny GLUON_RELEASE=2017.1.x`.
+* start building with `make GLUON_TARGET=<your target> GLUON_RELEASE=<your release name>`. I'd recommend adding `-j`, followed by the number of threads your CPU has, in order to make use of multithreading and speed up the build process. An example build command could be `make -j4 GLUON_TARGET=ar71xx-tiny GLUON_RELEASE=2017.1.x`.
 
 Notes:  
 * When switching Gluon branches a `make -C lede dirclean` can be necessary in order to remove an old toolchain.

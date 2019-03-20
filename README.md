@@ -5,9 +5,9 @@ Build the docker image:
 `docker build -t build-gluon - < Dockerfile`
 
 Start a container with a shell prompt:  
-`docker run -it -v $(pwd)/lede:/gluon/lede -v $(pwd)/output:/gluon/output build-gluon`  
-This command maps the directories `lede` and `output` in your current working directory to the according directories inside the container. `lede` will contain the files that are created during the build process whereas `output` will contain your built images. Reusing `lede` is recommended as it will speed up the build process significantly when building previous targets again. 
-You can use different paths of course, this is just an example. Just replace `$(pwd)/lede` and `$(pwd)/output` with paths to your liking.
+`docker run -it -v $(pwd)/openwrt:/gluon/openwrt -v $(pwd)/output:/gluon/output build-gluon`  
+This command maps the directories `openwrt` and `output` in your current working directory to the according directories inside the container. `openwrt` will contain the files that are created during the build process whereas `output` will contain your built images. Reusing `openwrt` is recommended as it will speed up the build process significantly when building previous targets again. 
+You can use different paths of course, this is just an example. Just replace `$(pwd)/openwrt` and `$(pwd)/output` with paths to your liking.
 
 Next steps for a successful build:
 * `cd` to `/gluon` and run a `git pull` (not strictly necessary if you just built the docker image since the build process cloned the most recent version, however, I'd recommend making it a habit)

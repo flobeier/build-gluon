@@ -16,7 +16,7 @@ Next steps for a successful build:
 * start building with `make GLUON_TARGET=<your target> GLUON_RELEASE=<your release name>`. I'd recommend adding `-j`, followed by the number of threads your CPU has, in order to make use of multithreading and speed up the build process. An example build command could be `make -j4 GLUON_TARGET=ar71xx-tiny GLUON_RELEASE=2017.1.x`.
 
 Notes:  
-* When switching Gluon branches a `make -C lede dirclean` can be necessary in order to remove an old toolchain.
+* When switching Gluon branches a `make -C openwrt dirclean` can be necessary in order to remove an old toolchain.
 * Make sure that you have enough free space, e. g. `ar71xx` needs around 11 GB. The other targets require similar amounts.
 
 Fore more information visit https://gluon.readthedocs.io/.
